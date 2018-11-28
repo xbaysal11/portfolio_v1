@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    vertical-align: baseline;
+    font-size: 100%;
+
+}
+body {
+    width: 100%;
+    background: #000;
+    font-family: circe;
+    overflow: -moz-scrollbars-none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+@font-face {
+    font-family: 'circe';
+    src: url(../res/Circe-Regular.ttf);
+}
+
+#loader {
+    position: fixed;
+    width: 90%;
+    height: 100vh;
+    z-index: 1;
+    overflow: visible;
+    background: #000 url('../res/loader.gif') no-repeat center center;
+}
+
+.ornament{
+    width: 72%;
+    margin-left: 14%;
+}
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+.res_col {
+    text-align: right;
+}
+
+h1 {
+    margin: 1%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 48px;
+}
+h5 {
+     color: #fff;
+     font-size: 16px;
+     font-weight: 300;
+    margin-bottom:  30px;
+ }
+p {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+}
+a {
+    color: #ffffff;
+}
+
+/* navbar */
+
+.nav {
+    border-bottom: 1px solid #EAEAEB;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.menu{
+    margin: 0  -100px 0 45vw;
+}
+.menu a{
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 5px;
+    line-height: 70px;
+}
+
+.menu span {
+    color: #ffe893;
+}
+
+label {
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+}
+
+#toggle {
+    display: none;
+}
+
+/* header */
+header {
+    margin: 0 0 100px 0px;
+}
+
+#header_center {
+    text-align: center;
+}
+#about {
+    margin: 2%;
+    color: #fff;
+    margin-bottom: -80px;
+}
+#logo {
+    margin-left: 32%;
+    width: 36%;
+}
+
+/* .dir */
+.dir {
+    margin: 50px 0 50px 0;
+    text-align: center;
+    width: 100%;
+}
+.dir img {
+    margin: 1%;
+    width: 20%;
+}
+
+/* header2 */
+.project img{
+    border: 1px white double;
+    display: inline-block;
+    margin: 1%;
+    width: 20%;
+}
+.project{
+    margin-top: 80px;
+    text-align: center;
+}
+/*contacts*/
+#contact {
+    margin: 2%;
+    color: #fff;
+}
+
+/* footer */
+footer pre {
+    text-align: right;
+    text-transform: uppercase;
+    color: grey;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 1000px) {
+    body{
+        font-family: circe;
+    }
+    header {
+        margin: 50px 0 100px 0;
+        text-align: left;
+    }
+    header h1 {
+        font-size: 32px;
+    }
+    .ornament{
+        margin-left: -0.1%;
+        width: 100%;
+    }
+    #logo {
+        margin-left: 10%;
+        margin-bottom: -50px;
+        width: 80%;
+    }
+    label {
+        margin: 0 0 0 90%;
+        display: block;
+        cursor: pointer;
+
+    }
+
+    .menu {
+        margin: 0;
+        width: 50%;
+        display: none;
+        background-color: black;
+        background-size: 20px;
+        fill-opacity: 30%;
+        left: 70%;
+        right: 0;
+    }
+    .menu a {
+        line-height: 40px;
+        display: block;
+        margin: 0;
+        width: 50%;
+    }
+    #toggle:checked + .menu {
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+
+    .par img{
+        margin: 1%;
+        width: 50%;
+    }
+    .par {
+        text-align: center;
+        margin: 1%;
+        font-size: 12px;
+    }
+    .res_col {
+        text-align: left;
+    }
+    .dir {
+        margin: 10px 0 10px 0;
+    }
+    .dir img {
+        margin: 1%;
+        width: 40%;
+    }
+    .header2 {
+        margin: 0 0 40px 0;
+    }
+    .header2 h1 {
+        font-size: 50px;
+    }
+    .header2 p {
+        font-size: 14px;
+        width: 100%;
+    }
+    .logo {
+        padding: 0;
+    }
+    .project{
+        margin-top: 40px;
+    }
+    footer pre{
+        margin-left: -30px;
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baisalbek Daniiarov Portfolio</title>
+
+    <!--Bootstrap4 js,css / JQuery js-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
+
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+<div class="wrapper">
+    <div id="loader"></div>
+    <script type="text/javascript">
+        var loader;
+        function loadNow(opacity) {
+            if(opacity <= 0) {
+                displayContent();
+            }
+            else {
+                loader.style.opacity = opacity;
+                window.setTimeout(function() {
+                    loadNow(opacity - 0.05)
+                }, 100);
+            }
+        }
+        function displayContent() {
+            loader.style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            loader = document.getElementById('loader');
+            loadNow(1);
+        });
+    </script>
+
+    <div class="anim section">
+        <div  class="menu-block">
+            <div class="nav">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle"/>
+                <div class="menu">
+                    <a href="#header">About Me</a>
+                    <a href="#knowledger">Knowledge</a>
+                    <a href="#projector">Projects</a>
+                    <a href="#contactor">Contacts</a>
+                    <a href="indexRUS.html"><span>RUS</span></a>
+                    <a href="index.html"><span>ENG</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.menu-btn').on('click', function (e) {
+            e.preventDefault();
+            $(this).toggleClass('menu-btn_active');
+            $('.menu-nav').toggleClass('menu-nav_active');
+        });
+    </script>
+
+    <div id="header">
+        <img class="anim ornament" src="res/1.jpg" alt="project img">
+        <div id="logotype">
+            <img id="logo" class="anim" src="res/black.jpg" alt="logo">
+        </div>
+        <header>
+            <div id="header_center">
+                <h1 class="anim">BAISALBEK DANIIAROV</h1>
+                <h5 class="anim">The world consists of zeros and ones.<br>You are either one or zero.</h5>
+            </div>
+            <div id="about">
+                <div class='row'>
+                    <div class="col-6 col-md-6 res_col"><strong>Name:</strong></div>
+                    <div class="col-md-6 res_inf">Baisalbek Daniiarov.</div>
+                </div>
+                <div class='row'>
+                    <div class="col-6 col-md-6 res_col"><strong>Date of birth:</strong></div>
+                    <div class="col-md-6 res_inf"> 23 May 1999.</div>
+                </div>
+                <div class='row'>
+                    <div class="col-6 col-md-6 res_col"><strong>Address</strong></div>
+                    <div class="col-md-6 res_inf">Bishkek,Kyrgyzstan.</div>
+                </div>
+                <div class='row'>
+                    <div class="col-6 col-md-6 res_col"><strong>Profession:</strong></div>
+                    <div class="col-md-6 res_inf">Web Programmer, Java Developer, Android Developer.</div>
+                </div>
+                <div class='row'>
+                    <div class="col-6 col-md-6 res_col"><strong>Specialization:</strong></div>
+                    <div class="col-md-6 res_inf">Hands sharpened by BackEnd, but FrontEnd is our joy.</div>
+                </div>
+                <div class='row'>
+                    <div class="col-6 col-md-6 res_col"><strong>Experience:</strong></div>
+                    <div class="col-md-6 res_inf">No work experience</div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div id="knowledger">
+        <img class="anim ornament" src="res/1.jpg" alt="project img">
+        <div id="knowledge">
+            <div class="container">
+                <h1 class="anim text-center">Knowledge</h1>
+                <div class="anim card-deck mb-3 text-center ">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Programming Languages</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row justify-content-md-center">
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;"><img
+                                                src="res/java.png" width="70%"
+                                                style="padding: 10%;">
+                                        </div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            Java
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;">
+                                            <img
+                                                src="res/python.jpg" width="70%"
+                                                style="padding: 10%;">
+                                        </div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            Python
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;"><img
+                                                src="res/javascript.png" width="70%"
+                                                style="padding: 10%;"></div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            JavaScript
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">WEB Tools</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row justify-content-md-center">
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;"><img
+                                                src="res/bootstrap.png" width="70%"
+                                                style="padding: 10%;"></div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            Bootstrap
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;"><img
+                                                src="res/jquery.png" width="70%"
+                                                style="padding: 10%;">
+                                        </div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            JQuery
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;"><img
+                                                src="res/css.png" width="70%" style="padding: 10%;">
+                                        </div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            CSS
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;"><img
+                                                src="res/html.png" width="70%" style="padding: 10%;">
+                                        </div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            HTML
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Development Environment</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row justify-content-md-center">
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;"><img
+                                                src="res/git.png" width="70%" style="padding: 10%;">
+                                        </div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            Git
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;"><img
+                                                src="res/ubuntu.png" width="70%"
+                                                style="padding: 10%;">
+                                        </div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            Linux Ubuntu
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;"><img
+                                                src="res/jetbrains.png" width="70%"
+                                                style="padding: 10%;"></div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            JetBrains
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="anim card-deck mb-3 text-center">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">DataBase</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row justify-content-md-center">
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;"><img
+                                                src="res/mysql.png" width="70%"
+                                                style="padding: 10%;">
+                                        </div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            MySQL
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Testing</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row justify-content-md-center">
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;"><img
+                                                src="res/junit.png" width="70%"
+                                                style="padding: 10%;"></div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            JUnit 4
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">WEB Apps</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row justify-content-md-center">
+                                <div class="col-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-4 container-fluid" style="padding-right: 0;"><img
+                                                src="res/wordpress.png" width="70%"
+                                                style="padding: 10%;"></div>
+                                        <div class="col-8 container-fluid"
+                                             style="margin-top: auto; padding-left: 0; margin-bottom: auto; text-align: left">
+                                            Word Press
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projector">
+        <img class="anim ornament" src="res/1.jpg" alt="project img">
+        <div id="projects" class="header2">
+            <h1 class="anim">Projects</h1>
+            <div class="project">
+                <p class="anim par"><a href="http://com17.on.kg/xbaysal11/index.html" target="_blank">WEB site: "Baisalbek Daniiarov Portfolio" - link</a></p>
+                <p class="anim par">Used: HTML, CSS, JavaScript, Bootstrap Framework,  JQuery 4 Framework </p>
+                <div class="anim par">
+                    <img src="res/web1.png" alt="web img" onclick="window.open('res/web1.png');">
+                    <img src="res/web2.png" alt="web img" onclick="window.open('res/web2.png','_blank');">
+                    <img src="res/web3.png" alt="web img" onclick="window.open('res/web3.png','_blank');">
+                </div>
+            </div>
+            <div class="project">
+                <p class="anim par"><a href="https://github.com/xbaysal11/TopLevelDiary" target="_blank">Desktop Application: "TopLevel Diary" - link</a></p>
+                <p class="anim par"> Used: Java, JavaFX, MySQL </p>
+                <div class="anim par">
+                    <img src="res/project1.png" alt="web img" onclick="window.open('res/project1.png','_blank');">
+                    <img src="res/project2.png" alt="web img" onclick="window.open('res/project2.png','_blank');">
+                    <img src="res/project3.png" alt="web img" onclick="window.open('res/project3.png','_blank');">
+                </div>
+            </div>
+            <p class="anim par project"><a href="https://github.com/xbaysal11/" target="_blank">GitHub - link</a></p>
+
+        </div>
+    </div>
+    <div id="diror">
+        <img class="anim ornament" src="res/1.jpg" alt="project img">
+        <div id="dir" class="anim dir">
+            <div class="container">
+                <a href="#header"> <img src="res/about_me.png" alt="project img"></a>
+                <a href="#knowledger"><img src="res/knowledge.png" alt="project img"></a>
+                <a href="#projector"><img src="res/projects.png" alt="project img"></a>
+                <a href="#contactor"><img src="res/contacts.png" alt="project img"></a>
+            </div>
+        </div>
+    </div>
+    <div id="contactor">
+        <img class="anim ornament" src="res/1.jpg" alt="project img">
+        <div id="contact" class="anim">
+            <h1>Contacts</h1>
+            <div class='row'>
+                <div class="col-6 col-md-6 res_col"><strong>Tel:</strong></div>
+                <div   class="col-md-6 res_inf"><span style="cursor:pointer">Show Number</span></div>
+            </div>
+            <div class='row'>
+                <div class="col-6 col-md-6 res_col"><strong>E-mail:</strong></div>
+                <div  class="col-md-6 res_inf"><span style="cursor:pointer">Show E-mail</span></div>
+            </div>
+            <div class='row'>
+                <div class="col-6 col-md-6 res_col"><strong>WhatsApp:</strong></div>
+                <div class="col-md-6 res_inf"><a href="https://wa.me/996703334411" target="_blank">Message</a></div>
+            </div>
+            <div class='row'>
+                <div class="col-6 col-md-6 res_col"><strong>Telegram:</strong></div>
+                <div class="col-md-6 res_inf"><a href="https://t.me/xbaysal11" target="_blank">Message</a></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".res_inf:contains('Show Number')").click(function () {
+            $(this).text("+996 703 33 44 11");
+            // $('.qr').show()
+        });
+        $(".res_inf:contains('Show E-mail')").click(function () {
+            $(this).text("baisalbek.daniiarov@gmail.com");
+            // $('.qr').show()
+        });
+    </script>
+
+    <footer>
+        <pre class="anim">
+            Baisalbek Daniiarov
+        </pre>
+    </footer>
+    <script type="text/javascript">
+        window.sr = ScrollReveal();
+        sr.reveal('.anim');
+    </script>
+</div>
+</body>
+</html>
