@@ -7,7 +7,9 @@
 
     <!--Bootstrap4 js,css / JQuery js-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scrollreveal.min.js"></script>
 
@@ -28,7 +30,7 @@
                     loadNow(opacity - 0.05)
                 }, 100);
             }
-        }
+        }	
         function displayContent() {
             loader.style.display = 'none';
             document.getElementById('content').style.display = 'block';
@@ -45,12 +47,12 @@
                 <label for="toggle">&#9776;</label>
                 <input type="checkbox" id="toggle"/>
                 <div class="menu">
-                    <a href="#header">About Me</a>
-                    <a href="#knowledger">Knowledge</a>
-                    <a href="#projector">Projects</a>
-                    <a href="#contactor">Contacts</a>
-                    <a href="indexRUS.html"><span>RUS</span></a>
-                    <a href="index.html"><span>ENG</span></a>
+                    <a class="mi" href="#header">About Me</a>
+                    <a class="mi" href="#knowledger">Knowledge</a>
+                    <a class="mi" href="#projector">Projects</a>
+                    <a class="mi" href="#contactor">Contacts</a>
+					<a class="mi" href="indexRUS.html"><img class="lang" src="res/rus.png" alt="lang"></a>
+					<a class="mi" href="index.html"><img class="lang" src="res/usa.png" alt="lang"></a>
                 </div>
             </div>
         </div>
@@ -70,7 +72,7 @@
         </div>
         <header>
             <div id="header_center">
-                <h1 class="anim">BAISALBEK DANIIAROV</h1>
+                <h1 class="anim mi">BAISALBEK DANIIAROV</h1>
                 <h5 class="anim">The world consists of zeros and ones.<br>You are either one or zero.</h5>
             </div>
             <div id="about">
@@ -100,7 +102,27 @@
                 </div>
             </div>
         </header>
-    </div>
+		</div>
+		<button onclick="topFunction()" id="up" title="Go to top"><img src="res/up.png" alt=""></button>
+		<script>
+						window.onscroll = function () {
+					scrollFunction()
+			};
+
+			function scrollFunction() {
+					if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 20) {
+							document.getElementById("up").style.display = "block";
+					} else {
+							document.getElementById("up").style.display = "none";
+					}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+					document.body.scrollTop = 0;
+					document.documentElement.scrollTop = 0;
+			}
+		</script>
     <div id="knowledger">
         <img class="anim ornament" src="res/1.jpg" alt="project img">
         <div id="knowledge">
@@ -127,7 +149,7 @@
                                     <div class="row">
                                         <div class="col-4 container-fluid">
                                             <img
-                                                src="res/python.jpg" width="70%">
+                                                src="res/python.png" width="70%">
                                         </div>
                                         <div class="col-8 container-fluid">
                                             Python
@@ -153,7 +175,7 @@
                         </div>
                         <div class="card-body">
                             <div class="row justify-content-md-center">
-															  <div class="col-12 col-md-12">
+								<div class="col-12 col-md-12">
                                     <div class="row">
                                         <div class="col-4 container-fluid"><img
                                                 src="res/react.png" width="70%"></div>
@@ -171,7 +193,6 @@
                                         </div>
                                     </div>
                                 </div>
-                              
                                 <div class="col-12 col-md-12">
                                     <div class="row">
                                         <div class="col-4 container-fluid"><img
@@ -310,6 +331,7 @@
             </div>
         </div>
     </div>
+
     <div id="projector">
         <img class="anim ornament" src="res/1.jpg" alt="project img">
         <div id="projects" class="header2">
@@ -318,18 +340,27 @@
                 <p class="anim par"><a href="http://com17.on.kg/xbaysal11/index.html" target="_blank">WEB site: "Baisalbek Daniiarov Portfolio" - link</a></p>
                 <p class="anim par">Used: HTML, CSS, JavaScript, Bootstrap Framework,  JQuery 4 Framework </p>
                 <div class="anim par">
-                    <img src="res/web1.png" alt="web img" onclick="window.open('res/web1.png');">
-                    <img src="res/web2.png" alt="web img" onclick="window.open('res/web2.png','_blank');">
-                    <img src="res/web3.png" alt="web img" onclick="window.open('res/web3.png','_blank');">
+                    <a href="res/web1.png" data-lightbox="gal1"  ><img src="res/web1.png" alt="web img" > </a> 
+                    <a href="res/web2.png" data-lightbox="gal1"  ><img src="res/web2.png" alt="web img" > </a> 
+                    <a href="res/web3.png" data-lightbox="gal1"  ><img src="res/web3.png" alt="web img" > </a> 
                 </div>
             </div>
             <div class="project">
                 <p class="anim par"><a href="https://github.com/xbaysal11/TopLevelDiary" target="_blank">Desktop Application: "TopLevel Diary" - link</a></p>
                 <p class="anim par"> Used: Java, JavaFX, MySQL </p>
                 <div class="anim par">
-                    <img src="res/project1.png" alt="web img" onclick="window.open('res/project1.png','_blank');">
-                    <img src="res/project2.png" alt="web img" onclick="window.open('res/project2.png','_blank');">
-                    <img src="res/project3.png" alt="web img" onclick="window.open('res/project3.png','_blank');">
+                    <a href="res/project1.png" data-lightbox="gal2"  ><img src="res/project1.png" alt="web img" > </a> 
+                    <a href="res/project2.png" data-lightbox="gal2"  ><img src="res/project2.png" alt="web img" > </a> 
+                    <a href="res/project3.png" data-lightbox="gal2"  ><img src="res/project3.png" alt="web img" > </a> 
+                </div>
+						</div>
+						<div class="project">
+                <p class="anim par"><a href="https://github.com/xbaysal11/Todo" target="_blank">WEB site: "TodoList" - link</a></p>
+                <p class="anim par"> Used: ReactJS </p>
+                <div class="anim par">
+                    <a href="res/reactapp.png" data-lightbox="gal3"  ><img src="res/reactapp.png" alt="web img" > </a> 
+                    <a href="res/reactapp2.png" data-lightbox="gal3"  ><img src="res/reactapp2.png" alt="web img" > </a> 
+                    <a href="res/reactapp3.png" data-lightbox="gal3"  ><img src="res/reactapp3.png" alt="web img" > </a> 
                 </div>
             </div>
             <p class="anim par project"><a href="https://github.com/xbaysal11/" target="_blank">GitHub - link</a></p>
@@ -340,31 +371,32 @@
         <img class="anim ornament" src="res/1.jpg" alt="project img">
         <div id="dir" class="anim dir">
             <div class="container">
-                <a href="#header"> <img src="res/about_me.png" alt="project img"></a>
-                <a href="#knowledger"><img src="res/knowledge.png" alt="project img"></a>
-                <a href="#projector"><img src="res/projects.png" alt="project img"></a>
-                <a href="#contactor"><img src="res/contacts.png" alt="project img"></a>
+                <a href="#header"> <img src="res/about_me.jpg" alt="project img"></a>
+                <a href="#knowledger"><img src="res/knowledge.jpg" alt="project img"></a>
+                <a href="#projector"><img src="res/projects.jpg" alt="project img"></a>
+                <a href="#contactor"><img src="res/contacts.jpg" alt="project img"></a>
             </div>
         </div>
     </div>
     <div id="contactor">
-        <img class="anim ornament" src="res/1.jpg" alt="project img">
+				<img class="anim ornament" src="res/1.jpg" alt="project img">
+				
         <div id="contact" class="anim">
             <h1>Contacts</h1>
             <div class='row'>
-                <div class="col-6 col-md-6 res_col"><strong>Tel:</strong></div>
-                <div   class="col-md-6 res_inf"><span style="cursor:pointer">Show Number</span></div>
+                <div class="col-6 col-md-6 res_col"><img class="icon1 icon" src="res/tel.png" alt="cont"><strong>Tel:</strong></div>
+                <div title="Number" class="col-md-6 res_inf blue"><span style="cursor:pointer">Show Number</span></div>
             </div>
             <div class='row'>
-                <div class="col-6 col-md-6 res_col"><strong>E-mail:</strong></div>
-                <div  class="col-md-6 res_inf"><span style="cursor:pointer">Show E-mail</span></div>
+                <div class="col-6 col-md-6 res_col"><img class="icon2 icon" src="res/mail.png" alt="cont"><strong>E-mail:</strong></div>
+                <div title="E-mail" class="col-md-6 res_inf blue"><span style="cursor:pointer">Show E-mail</span></div>
             </div>
             <div class='row'>
-                <div class="col-6 col-md-6 res_col"><strong>WhatsApp:</strong></div>
+                <div class="col-6 col-md-6 res_col"><img class="icon3 icon" src="res/wa.png" alt="cont"><strong>WhatsApp:</strong></div>
                 <div class="col-md-6 res_inf"><a href="https://wa.me/996703334411" target="_blank">Message</a></div>
             </div>
             <div class='row'>
-                <div class="col-6 col-md-6 res_col"><strong>Telegram:</strong></div>
+                <div class="col-6 col-md-6 res_col"><img class="icon4 icon" src="res/teleg.png" alt="cont"><strong>Telegram:</strong></div>
                 <div class="col-md-6 res_inf"><a href="https://t.me/xbaysal11" target="_blank">Message</a></div>
             </div>
         </div>

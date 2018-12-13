@@ -20,7 +20,10 @@ body {
     font-family: 'circe';
     src: url(../res/Circe-Regular.ttf);
 }
-
+.lang{
+	width: 30px;
+	height: 30px;
+}
 #loader {
     position: fixed;
     width: 90%;
@@ -32,18 +35,72 @@ body {
 .col-4{
 		padding-right: 0;
 }
-
+.icon{
+	width: 30px;
+	height: 30px;
+}
+.icon1{
+    margin-right: 72px;
+}
+.icon2{
+    margin-right: 47px;
+}
+.icon3{
+    margin-right: 20px;
+}
+.icon4{
+    margin-right: 35px;
+}
 .col-4 img{
-	  padding: 10%;
+	padding: 10%;
+}
+#up {
+	display: none;
+    position: fixed;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+	bottom: 20px;
+	right: 25px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: rgba(0, 0, 0, 0);
+	color: black;
+	cursor: pointer;
+	/* padding: 20px; */
+	border-radius: 4px;
+}
+#up img{
+    border: 1px solid white;
+    border-radius: 100px;
+    width: 65px;
+    height: 65px;
+    transition: 1s;
+}
+#up img:hover{
+    border: 1px solid rgb(255, 252, 65);
+    transform: scale(1.2);
 }
 
+.card{
+    background-color:rgba(77, 77, 77, 0.2);
+    color: azure;
+    transition: 1s;
+}
+.card:hover{
+    transform: scale(1.1);
+    color: white;
+    background-color:rgba(99, 99, 99, 0.37);
+
+}
 .col-8{
 		margin-top: auto; 
 		padding-left: 0; 
 		margin-bottom: auto; 
 		text-align: left;
 }
-
 .ornament{
     width: 72%;
     margin-left: 14%;
@@ -63,11 +120,11 @@ h1 {
     font-size: 48px;
 }
 h5 {
-     color: #fff;
-     font-size: 16px;
-     font-weight: 300;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
     margin-bottom:  30px;
- }
+}
 p {
     color: #fff;
     font-size: 17px;
@@ -97,7 +154,7 @@ a {
 }
 
 .menu span {
-    color: #ffe893;
+    color: #f5d870;
 }
 
 label {
@@ -127,7 +184,9 @@ header {
 #logo {
     margin-left: 32%;
     width: 36%;
+    transition: 1s;
 }
+
 
 /* .dir */
 .dir {
@@ -138,7 +197,14 @@ header {
 .dir img {
     margin: 1%;
     width: 20%;
+    filter: grayscale(100%);
+    transition: 1s;
 }
+.dir img:hover {
+    filter: grayscale(40%);
+    transform: scale(1.1);
+}
+
 
 /* header2 */
 .project img{
@@ -146,20 +212,45 @@ header {
     display: inline-block;
     margin: 1%;
     width: 20%;
+    filter: grayscale(100%);
+    transition: 1s;
 }
+.project img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+
 .project{
     margin-top: 80px;
     text-align: center;
 }
+
+
 /*contacts*/
 #contact {
     margin: 2%;
     color: #fff;
 }
 
+.blue:hover{
+    color: blue;
+}
+.mi{
+    transition: 1s;
+}
+.mi:hover{
+    transform: scale(1.1);
+    color:  #ffdf6b;
+}
+
+#logo:hover{
+    transform: scale(1.1);
+}
 /* footer */
 footer pre {
     text-align: right;
+    padding-right: 100px;
     text-transform: uppercase;
     color: grey;
 }
@@ -253,5 +344,38 @@ footer pre {
         margin-left: -30px;
         width: 100%;
     }
-
+    .icon1{
+        margin-right: 0;
+    }
+    .icon2{
+        margin-right: 0;
+    }
+    .icon3{
+        margin-right: 0;
+    }
+    .icon4{
+        margin-right: 0;
+    }
+    #up {
+        display: none;
+        position: fixed;
+        border-radius: 100px;
+        width: 35px;
+        height: 35px;
+        bottom: 20px;
+        right: 25px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: rgba(0, 0, 0, 0);
+        color: black;
+        cursor: pointer;
+        /* padding: 20px; */
+        border-radius: 4px;
+    }
+    #up img{
+        width: 35px;
+        height: 35px;
+    }
 }
