@@ -29,6 +29,20 @@ body {
     overflow: visible;
     background: #000 url('../res/loader.gif') no-repeat center center;
 }
+.col-4{
+		padding-right: 0;
+}
+
+.col-4 img{
+	  padding: 10%;
+}
+
+.col-8{
+		margin-top: auto; 
+		padding-left: 0; 
+		margin-bottom: auto; 
+		text-align: left;
+}
 
 .ornament{
     width: 72%;
