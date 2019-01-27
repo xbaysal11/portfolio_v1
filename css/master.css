@@ -7,6 +7,10 @@
   vertical-align: baseline;
   font-size: 100%;
 }
+.link {
+  height: 20px;
+  margin-bottom: 0.3%;
+}
 body {
   width: 100%;
   background: #000;
@@ -167,8 +171,11 @@ body {
 }
 .res_col {
   text-align: right;
+  color: #fff;
 }
-
+.par a {
+  margin-top: 1%;
+}
 h1 {
   margin: 0 1%;
   text-align: center;
@@ -188,6 +195,10 @@ p {
 }
 a {
   color: #ffffff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
 }
 
 /* navbar */
@@ -264,6 +275,9 @@ header {
 .title {
   text-align: center;
 }
+.title a:hover {
+  color: #fff;
+}
 .prtitle {
   margin: 2%;
 }
@@ -279,7 +293,7 @@ header {
   filter: grayscale(0);
   transform: scale(1.1);
   border: 1px gold double;
-  /* box-shadow: 0 10px 10px 10px #eaeaeb; */
+  box-shadow: 2px 2px 50px 2px gold;
 }
 
 .project {
@@ -293,16 +307,15 @@ header {
   margin: 2%;
   color: #fff;
 }
+#contact span {
+  color: #fff;
+}
+.blue {
+  color: white;
+}
 
 .blue:hover {
-  color: blue;
-}
-.mi {
-  transition: 1s;
-}
-.mi:hover {
-  transform: scale(1.1);
-  color: #ffdf6b;
+  color: #0056b3;
 }
 
 #logo:hover {
@@ -374,8 +387,10 @@ footer pre {
     margin: 1%;
     font-size: 12px;
   }
+
   .res_col {
     text-align: left;
+    /* color: #fff; */
   }
   .dir {
     margin: 10px 0 10px 0;
