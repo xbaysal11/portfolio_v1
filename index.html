@@ -1,427 +1,543 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/x-icon" href="res/black.jpg" />
     <title>Baisalbek Daniiarov Portfolio</title>
 
     <!--Bootstrap4 js,css / JQuery js-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/lightbox.min.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/lightbox-plus-jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
-    <link rel="stylesheet" href="css/master.css">
-</head>
-<body>
-<div class="wrapper">
-    <div id="loader"></div>
-    <script type="text/javascript">
+    <link rel="stylesheet" href="css/master.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="loader"></div>
+      <script type="text/javascript">
         var loader;
         function loadNow(opacity) {
-            if(opacity <= 0) {
-                displayContent();
-            }
-            else {
-                loader.style.opacity = opacity;
-                window.setTimeout(function() {
-                    loadNow(opacity - 0.05)
-                }, 100);
-            }
-        }	
+          if (opacity <= 0) {
+            displayContent();
+          } else {
+            loader.style.opacity = opacity;
+            window.setTimeout(function() {
+              loadNow(opacity - 0.05);
+            }, 100);
+          }
+        }
         function displayContent() {
-            loader.style.display = 'none';
-            document.getElementById('content').style.display = 'block';
+          loader.style.display = "none";
+          document.getElementById("content").style.display = "block";
         }
         document.addEventListener("DOMContentLoaded", function() {
-            loader = document.getElementById('loader');
-            loadNow(1);
+          loader = document.getElementById("loader");
+          loadNow(1);
         });
-    </script>
+      </script>
 
-    <div class="anim section">
-        <div  class="menu-block">
-            <div class="nav">
-                <label for="toggle">&#9776;</label>
-                <input type="checkbox" id="toggle"/>
-                <div class="menu">
-                    <a class="mi" href="#header">About Me</a>
-                    <a class="mi" href="#knowledger">Knowledge</a>
-                    <a class="mi" href="#projector">Projects</a>
-                    <a class="mi" href="#contactor">Contacts</a>
-					<a class="mi" href="indexRUS.html"><img class="lang" src="res/rus.png" alt="lang"></a>
-					<a class="mi" href="index.html"><img class="lang" src="res/usa.png" alt="lang"></a>
-                </div>
+      <div class="anim section">
+        <div class="menu-block">
+          <div class="nav">
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle" />
+            <div class="menu">
+              <a class="mi" href="#header">About Me</a>
+              <a class="mi" href="#knowledger">Knowledge</a>
+              <a class="mi" href="#projector">Projects</a>
+              <a class="mi" href="#contactor">Contacts</a>
+              <a class="mi" href="indexRUS.html"
+                ><img class="lang" src="res/rus.png" alt="lang"
+              /></a>
+              <a class="mi" href="index.html"
+                ><img class="lang" src="res/usa.png" alt="lang"
+              /></a>
             </div>
+          </div>
         </div>
-    </div>
-    <script>
-        $('.menu-btn').on('click', function (e) {
-            e.preventDefault();
-            $(this).toggleClass('menu-btn_active');
-            $('.menu-nav').toggleClass('menu-nav_active');
+      </div>
+      <script>
+        $(".menu-btn").on("click", function(e) {
+          e.preventDefault();
+          $(this).toggleClass("menu-btn_active");
+          $(".menu-nav").toggleClass("menu-nav_active");
         });
-    </script>
+      </script>
 
-    <div id="header">
-        <img class="anim ornament" src="res/1.jpg" alt="project img">
-        <div id="logotype">
-            <img id="logo" class="anim" src="res/black.jpg" alt="logo">
+      <div id="header">
+        
+        <img class="anim ornament" src="res/1.jpg" alt="project img" />
+        <!-- <div id="logotype">
+          <img id="logo" class="anim" src="res/black.jpg" alt="logo" />
+        </div> -->
+        <div id="bag">
+          <div id="scene">
+              <div class=" img1" data-depth="0.1"><img class="im" src="./res/black.jpg" /></div>
+            <div  data-depth="0.7 ">
+              <img id="p1" class="icons" src="./res/icons8-css3.svg" />
+            </div>
+            <div data-depth="0.3 ">
+              <img class="icons" id="p2" src="./res/icons8-github.svg" />
+            </div>
+            <div data-depth="0.9 ">
+              <img id="p3" class="icons" src="./res/icons8-html-5.svg" />
+            </div>
+            <div data-depth="0.2">
+              <img id="p4" class="icons" src="./res/icons8-java.svg" />
+            </div>
+            <div data-depth="0.9 ">
+              <img id="p5" class="icons" src="./res/icons8-javascript.svg" />
+            </div>
+            <div data-depth="0.3 ">
+              <img id="p6" class="icons" src="./res/icons8-python.svg" />
+            </div>
+            <div data-depth="0.6 ">
+              <img id="p7" class="icons" src="./res/icons8-sql-30.png" />
+            </div>
+            <div data-depth="0.2 ">
+              <img id="p8" class="icons" src="./res/icons8-ubuntu-30.png" />
+            </div>
+          </div>
         </div>
+        <script>
+          var scene = document.getElementById("scene");
+          var parallaxInstance = new Parallax(scene);
+        </script>
         <header>
-            <div id="header_center">
-                <h1 class="anim mi">BAISALBEK DANIIAROV</h1>
-                <h5 class="anim">The world consists of zeros and ones.<br>You are either one or zero.</h5>
+          <div id="header_center">
+            <h1 class="anim mi prtitle">BAISALBEK DANIIAROV</h1>
+            <h5 class="anim">
+              The world consists of zeros and ones.<br />You are either one or
+              zero.
+            </h5>
+          </div>
+          <div id="about">
+            <div class="row">
+              <div class="col-6 col-md-6 res_col"><strong>Name:</strong></div>
+              <div class="col-md-6 res_inf">Baisalbek Daniiarov.</div>
             </div>
-            <div id="about">
-                <div class='row'>
-                    <div class="col-6 col-md-6 res_col"><strong>Name:</strong></div>
-                    <div class="col-md-6 res_inf">Baisalbek Daniiarov.</div>
-                </div>
-                <div class='row'>
-                    <div class="col-6 col-md-6 res_col"><strong>Date of birth:</strong></div>
-                    <div class="col-md-6 res_inf"> 23 May 1999.</div>
-                </div>
-                <div class='row'>
-                    <div class="col-6 col-md-6 res_col"><strong>Address</strong></div>
-                    <div class="col-md-6 res_inf">Bishkek,Kyrgyzstan.</div>
-                </div>
-                <div class='row'>
-                    <div class="col-6 col-md-6 res_col"><strong>Profession:</strong></div>
-                    <div class="col-md-6 res_inf">Web Programmer, Java Developer, Android Developer.</div>
-                </div>
-                <div class='row'>
-                    <div class="col-6 col-md-6 res_col"><strong>Specialization:</strong></div>
-                    <div class="col-md-6 res_inf">Hands sharpened by BackEnd, but FrontEnd is our joy.</div>
-                </div>
-                <div class='row'>
-                    <div class="col-6 col-md-6 res_col"><strong>Experience:</strong></div>
-                    <div class="col-md-6 res_inf">1-Month internship "IT LAB"</div>
-                </div>
+            <div class="row">
+              <div class="col-6 col-md-6 res_col">
+                <strong>Date of birth:</strong>
+              </div>
+              <div class="col-md-6 res_inf">23 May 1999.</div>
             </div>
+            <div class="row">
+              <div class="col-6 col-md-6 res_col"><strong>Address</strong></div>
+              <div class="col-md-6 res_inf">Bishkek,Kyrgyzstan.</div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-6 res_col">
+                <strong>Profession:</strong>
+              </div>
+              <div class="col-md-6 res_inf">
+                Web Programmer, Java Developer, Android Developer.
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-6 res_col">
+                <strong>Specialization:</strong>
+              </div>
+              <div class="col-md-6 res_inf">
+                Hands sharpened by BackEnd, but FrontEnd is our joy.
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-6 res_col">
+                <strong>Experience:</strong>
+              </div>
+              <div class="col-md-6 res_inf">01.11.18 until today internship "IT LAB"</div>
+            </div>
+          </div>
         </header>
-		</div>
-		<button onclick="topFunction()" id="up" title="Go to top"><img src="res/up.png" alt=""></button>
-		<script>
-						window.onscroll = function () {
-					scrollFunction()
-			};
+      </div>
+      <button onclick="topFunction()" id="up" title="Go to top">
+        <img src="res/up.png" alt="" />
+      </button>
+      <script>
+        window.onscroll = function() {
+          scrollFunction();
+        };
 
-			function scrollFunction() {
-					if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 20) {
-							document.getElementById("up").style.display = "block";
-					} else {
-							document.getElementById("up").style.display = "none";
-					}
-			}
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 100 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            document.getElementById("up").style.display = "block";
+          } else {
+            document.getElementById("up").style.display = "none";
+          }
+        }
 
-			// When the user clicks on the button, scroll to the top of the document
-			function topFunction() {
-					document.body.scrollTop = 0;
-					document.documentElement.scrollTop = 0;
-			}
-		</script>
-    <div id="knowledger">
-        <img class="anim ornament" src="res/1.jpg" alt="project img">
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      </script>
+      <div id="knowledger">
+        <img class="anim ornament" src="res/1.jpg" alt="project img" />
         <div id="knowledge">
-            <div class="container">
-                <h1 class="anim text-center">Knowledge</h1>
-                <div class="anim card-deck mb-3 text-center ">
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Programming Languages</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="row justify-content-md-center">
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid"><img
-                                                src="res/java.png" width="70%">
-                                        </div>
-                                        <div class="col-8 container-fluid">
-                                            Java
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid">
-                                            <img
-                                                src="res/python.png" width="70%">
-                                        </div>
-                                        <div class="col-8 container-fluid">
-                                            Python
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid"><img
-                                                src="res/javascript.png" width="70%"></div>
-                                        <div class="col-8 container-fluid">
-                                            JavaScript
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">WEB Tools</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="row justify-content-md-center">
-								<div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid"><img
-                                                src="res/react.png" width="70%"></div>
-                                        <div class="col-8 container-fluid">
-                                            ReactJS
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid"><img
-                                                src="res/bootstrap.png" width="70%"></div>
-                                        <div class="col-8 container-fluid">
-                                            Bootstrap
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid"><img
-                                                src="res/jquery.png" width="70%">
-                                        </div>
-                                        <div class="col-8 container-fluid">
-                                            JQuery
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid"><img
-                                                src="res/css.png" width="70%">
-                                        </div>
-                                        <div class="col-8 container-fluid">
-                                            CSS
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid"><img
-                                                src="res/html.png" width="70%">
-                                        </div>
-                                        <div class="col-8 container-fluid">
-                                            HTML
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Development Environment</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="row justify-content-md-center">
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid"><img
-                                                src="res/git.png" width="70%">
-                                        </div>
-                                        <div class="col-8 container-fluid">
-                                            Git
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid"><img
-                                                src="res/ubuntu.png" width="70%">
-                                        </div>
-                                        <div class="col-8 container-fluid">
-                                            Linux Ubuntu
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid"><img
-                                                src="res/jetbrains.png" width="70%"></div>
-                                        <div class="col-8 container-fluid">
-                                            JetBrains
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+          <div class="container">
+            <h1 class="anim text-center prtitle">Skills</h1>
+            <div class="anim card-deck mb-3 text-center ">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">Programming Languages</h4>
                 </div>
-                <div class="anim card-deck mb-3 text-center">
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">DataBase</h4>
+                <div class="card-body">
+                  <div class="row justify-content-md-center">
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/java.png" width="70%" />
                         </div>
-                        <div class="card-body">
-                            <div class="row justify-content-md-center">
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid">
-																					<img src="res/mysql.png" width="70%">
-                                        </div>
-                                        <div class="col-8 container-fluid">
-                                            MySQL
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
+                        <div class="col-8 container-fluid">Java</div>
+                      </div>
                     </div>
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Testing</h4>
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/python.png" width="70%" />
                         </div>
-                        <div class="card-body">
-                            <div class="row justify-content-md-center">
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid"><img
-                                                src="res/junit.png" width="70%"></div>
-                                        <div class="col-8 container-fluid">
-                                            JUnit 4
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                        <div class="col-8 container-fluid">Python</div>
+                      </div>
                     </div>
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">WEB Apps</h4>
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/javascript.png" width="70%" />
                         </div>
-                        <div class="card-body">
-                            <div class="row justify-content-md-center">
-                                <div class="col-12 col-md-12">
-                                    <div class="row">
-                                        <div class="col-4 container-fluid"><img
-                                                src="res/wordpress.png" width="70%"></div>
-                                        <div class="col-8 container-fluid">
-                                            Word Press
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
+                        <div class="col-8 container-fluid">JavaScript</div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">WEB Tools</h4>
+                </div>
+                <div class="card-body">
+                  <div class="row justify-content-md-center">
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/react.png" width="70%" />
+                        </div>
+
+                        <div class="col-8 container-fluid">ReactJS</div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/bootstrap.png" width="70%" />
+                        </div>
+
+                        <div class="col-8 container-fluid">Bootstrap</div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/jquery.png" width="70%" />
+                        </div>
+                        <div class="col-8 container-fluid">JQuery</div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/css.png" width="70%" />
+                        </div>
+                        <div class="col-8 container-fluid">CSS</div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/html.png" width="70%" />
+                        </div>
+                        <div class="col-8 container-fluid">HTML</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">
+                    Development Environment
+                  </h4>
+                </div>
+                <div class="card-body">
+                  <div class="row justify-content-md-center">
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/git.png" width="70%" />
+                        </div>
+                        <div class="col-8 container-fluid">Git</div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/ubuntu.png" width="70%" />
+                        </div>
+                        <div class="col-8 container-fluid">Linux Ubuntu</div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/jetbrains.png" width="70%" />
+                        </div>
+
+                        <div class="col-8 container-fluid">JetBrains</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
+            <div class="anim card-deck mb-3 text-center">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">DataBase</h4>
+                </div>
+                <div class="card-body">
+                  <div class="row justify-content-md-center">
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/mysql.png" width="70%" />
+                        </div>
+                        <div class="col-8 container-fluid">MySQL</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">Testing</h4>
+                </div>
+                <div class="card-body">
+                  <div class="row justify-content-md-center">
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/junit.png" width="70%" />
+                        </div>
 
-    <div id="projector">
-        <img class="anim ornament" src="res/1.jpg" alt="project img">
+                        <div class="col-8 container-fluid">JUnit 4</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">WEB Apps</h4>
+                </div>
+                <div class="card-body">
+                  <div class="row justify-content-md-center">
+                    <div class="col-12 col-md-12">
+                      <div class="row">
+                        <div class="col-4 container-fluid">
+                          <img src="res/wordpress.png" width="70%" />
+                        </div>
+
+                        <div class="col-8 container-fluid">Word Press</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="projector">
+        <img class="anim ornament" src="res/1.jpg" alt="project img" />
         <div id="projects" class="header2">
-            <h1 class="anim">Projects</h1>
-            <div class="project">
-                <p class="anim par"><a href="http://com17.on.kg/xbaysal11/index.html" target="_blank">WEB site: "Baisalbek Daniiarov Portfolio" - link</a></p>
-                <p class="anim par">Used: HTML, CSS, JavaScript, Bootstrap Framework,  JQuery 4 Framework </p>
-                <div class="anim par">
-                    <a href="res/web1.png" data-lightbox="gal1"  ><img src="res/web1.png" alt="web img" > </a> 
-                    <a href="res/web2.png" data-lightbox="gal1"  ><img src="res/web2.png" alt="web img" > </a> 
-                    <a href="res/web3.png" data-lightbox="gal1"  ><img src="res/web3.png" alt="web img" > </a> 
-                </div>
+          <h1 class="anim prtitle">Projects</h1>
+          <div class="title">
+            <p class="anim par">
+              <a href="http://xbaysal11.github.io" target="_blank"
+                >WEB site: "Baisalbek Daniiarov Portfolio" &rarr;</a
+              >
+            </p>
+            <p class="anim par">
+              Used: HTML, CSS, JavaScript, Bootstrap Framework, JQuery 4
+              Framework
+            </p>
+          </div>
+          <div class="project">
+            <div class="anim par">
+              <a href="res/web1.png" data-lightbox="gal1"
+                ><img src="res/web1.png" alt="web img" />
+              </a>
+              <a href="res/web2.png" data-lightbox="gal1"
+                ><img src="res/web2.png" alt="web img" />
+              </a>
+              <a href="res/web3.png" data-lightbox="gal1"
+                ><img src="res/web3.png" alt="web img" />
+              </a>
             </div>
-            <div class="project">
-                <p class="anim par"><a href="https://github.com/xbaysal11/TopLevelDiary" target="_blank">Desktop Application: "TopLevel Diary" - link</a></p>
-                <p class="anim par"> Used: Java, JavaFX, MySQL </p>
-                <div class="anim par">
-                    <a href="res/project1.png" data-lightbox="gal2"  ><img src="res/project1.png" alt="web img" > </a> 
-                    <a href="res/project2.png" data-lightbox="gal2"  ><img src="res/project2.png" alt="web img" > </a> 
-                    <a href="res/project3.png" data-lightbox="gal2"  ><img src="res/project3.png" alt="web img" > </a> 
-                </div>
-						</div>
-						<div class="project">
-                <p class="anim par"><a href="https://github.com/xbaysal11/Todo" target="_blank">WEB site: "TodoList" - link</a></p>
-                <p class="anim par"> Used: ReactJS </p>
-                <div class="anim par">
-                    <a href="res/reactapp.png" data-lightbox="gal3"  ><img src="res/reactapp.png" alt="web img" > </a> 
-                    <a href="res/reactapp2.png" data-lightbox="gal3"  ><img src="res/reactapp2.png" alt="web img" > </a> 
-                    <a href="res/reactapp3.png" data-lightbox="gal3"  ><img src="res/reactapp3.png" alt="web img" > </a> 
-                </div>
+          </div>
+          <div class="title">
+            <p class="anim par">
+              <a
+                href="https://github.com/xbaysal11/TopLevelDiary"
+                target="_blank"
+                >Desktop Application: "TopLevel Diary"   &rarr;</a
+              >
+            </p>
+            <p class="anim par">Used: Java, JavaFX, MySQL</p>
+          </div>
+          <!-- <div class="project"> -->
+          <div class="project">
+            <div class="anim par">
+              <a href="res/project1.png" data-lightbox="gal2"
+                ><img src="res/project1.png" alt="web img" />
+              </a>
+              <a href="res/project2.png" data-lightbox="gal2"
+                ><img src="res/project2.png" alt="web img" />
+              </a>
+              <a href="res/project3.png" data-lightbox="gal2"
+                ><img src="res/project3.png" alt="web img" />
+              </a>
             </div>
-            <p class="anim par project"><a href="https://github.com/xbaysal11/" target="_blank">GitHub - link</a></p>
+            </div>
 
-        </div>
-    </div>
-    <div id="diror">
-        <img class="anim ornament" src="res/1.jpg" alt="project img">
+          <div class="title"> 
+
+            <p class="anim par">
+              <a href="https://github.com/xbaysal11/Todo" target="_blank"
+                >WEB site: "TodoList" &rarr;</a>
+            </p>
+            <p class="anim par">Used: ReactJS</p>
+          </div>
+          <div class="project">
+            <div class="anim par">
+              <a href="res/reactapp.png" data-lightbox="gal3"
+                ><img src="res/reactapp.png" alt="web img" />
+              </a>
+              <a href="res/reactapp2.png" data-lightbox="gal3"
+                ><img src="res/reactapp2.png" alt="web img" />
+              </a>
+              <a href="res/reactapp3.png" data-lightbox="gal3"
+                ><img src="res/reactapp3.png" alt="web img" />
+              </a>
+            </div>
+          </div>
+          <div class="title"> 
+            <p class="anim par">
+              <a href="https://github.com/xbaysal11/" target="_blank"
+                >GitHub &rarr;</a>
+            </p>
+          </div>
+      </div>
+
+
+      <div id="diror">
+        <img class="anim ornament" src="res/1.jpg" alt="project img" />
         <div id="dir" class="anim dir">
-            <div class="container">
-                <a href="#header"> <img src="res/about_me.jpg" alt="project img"></a>
-                <a href="#knowledger"><img src="res/knowledge.jpg" alt="project img"></a>
-                <a href="#projector"><img src="res/projects.jpg" alt="project img"></a>
-                <a href="#contactor"><img src="res/contacts.jpg" alt="project img"></a>
-            </div>
+          <div class="container">
+            <a href="#header">
+              <img src="res/about_me.jpg" alt="project img"
+            /></a>
+            <a href="#knowledger"
+              ><img src="res/knowledge.jpg" alt="project img"
+            /></a>
+            <a href="#projector"
+              ><img src="res/projects.jpg" alt="project img"
+            /></a>
+            <a href="#contactor"
+              ><img src="res/contacts.jpg" alt="project img"
+            /></a>
+          </div>
         </div>
-    </div>
-    <div id="contactor">
-				<img class="anim ornament" src="res/1.jpg" alt="project img">
-				
-        <div id="contact" class="anim">
-            <h1>Contacts</h1>
-            <div class='row'>
-                <div class="col-6 col-md-6 res_col"><img class="icon1 icon" src="res/tel.png" alt="cont"><strong>Tel:</strong></div>
-                <div title="Number" class="col-md-6 res_inf blue"><span style="cursor:pointer">Show Number</span></div>
-            </div>
-            <div class='row'>
-                <div class="col-6 col-md-6 res_col"><img class="icon2 icon" src="res/mail.png" alt="cont"><strong>E-mail:</strong></div>
-                <div title="E-mail" class="col-md-6 res_inf blue"><span style="cursor:pointer">Show E-mail</span></div>
-            </div>
-            <div class='row'>
-                <div class="col-6 col-md-6 res_col"><img class="icon3 icon" src="res/wa.png" alt="cont"><strong>WhatsApp:</strong></div>
-                <div class="col-md-6 res_inf"><a href="https://wa.me/996703334411" target="_blank">Message</a></div>
-            </div>
-            <div class='row'>
-                <div class="col-6 col-md-6 res_col"><img class="icon4 icon" src="res/teleg.png" alt="cont"><strong>Telegram:</strong></div>
-                <div class="col-md-6 res_inf"><a href="https://t.me/xbaysal11" target="_blank">Message</a></div>
-            </div>
-        </div>
-    </div>
-    <script>
-        $(".res_inf:contains('Show Number')").click(function () {
-            $(this).text("+996 703 33 44 11");
-            // $('.qr').show()
-        });
-        $(".res_inf:contains('Show E-mail')").click(function () {
-            $(this).text("baisalbek.daniiarov@gmail.com");
-            // $('.qr').show()
-        });
-    </script>
+      </div>
+      <div id="contactor">
+        <img class="anim ornament" src="res/1.jpg" alt="project img" />
 
-    <footer>
+        <div id="contact" class="anim">
+          <h1 class="prtitle">Contacts</h1>
+          <div class="row">
+            <div class="col-6 col-md-6 res_col">
+              <img class="icon1 icon" src="res/tel.png" alt="cont" /><strong
+                >Tel:</strong
+              >
+            </div>
+            <div title="Number" class="col-md-6 res_inf blue">
+              <span style="cursor:pointer">Show Number</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-md-6 res_col">
+              <img class="icon2 icon" src="res/mail.png" alt="cont" /><strong
+                >E-mail:</strong
+              >
+            </div>
+            <div title="E-mail" class="col-md-6 res_inf blue">
+              <span style="cursor:pointer">Show E-mail</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-md-6 res_col">
+              <img class="icon3 icon" src="res/wa.png" alt="cont" /><strong
+                >WhatsApp:</strong
+              >
+            </div>
+            <div class="col-md-6 res_inf">
+              <a href="https://wa.me/996703334411" target="_blank">Message</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-md-6 res_col">
+              <img class="icon4 icon" src="res/teleg.png" alt="cont" /><strong
+                >Telegram:</strong
+              >
+            </div>
+            <div class="col-md-6 res_inf">
+              <a href="https://t.me/xbaysal11" target="_blank">Message</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        $(".res_inf:contains('Show Number')").click(function() {
+          $(this).text("+996 703 33 44 11");
+          // $('.qr').show()
+        });
+        $(".res_inf:contains('Show E-mail')").click(function() {
+          $(this).text("baisalbek.daniiarov@gmail.com");
+          // $('.qr').show()
+        });
+      </script>
+
+      <footer>
         <pre class="anim">
             Baisalbek Daniiarov
         </pre>
-    </footer>
-    <script type="text/javascript">
+      </footer>
+      <script type="text/javascript">
         window.sr = ScrollReveal();
-        sr.reveal('.anim');
-    </script>
-</div>
-</body>
+        sr.reveal(".anim");
+      </script>
+    </div>
+  </body>
 </html>
