@@ -317,6 +317,10 @@ footer pre {
   body {
     font-family: circe;
   }
+  .icons {
+    visibility: hidden;
+  }
+
   header {
     margin: 50px 0 100px 0;
     text-align: left;
@@ -360,8 +364,10 @@ footer pre {
     position: relative;
     z-index: 1;
   }
-
-  .par img {
+  .title {
+    text-align: center;
+  }
+  .project .par img {
     margin: 1%;
     width: 50%;
   }
@@ -375,13 +381,7 @@ footer pre {
     text-align: left;
     /* color: #fff; */
   }
-  .dir {
-    margin: 10px 0 10px 0;
-  }
-  .dir img {
-    margin: 1%;
-    width: 40%;
-  }
+
   .header2 {
     margin: 0 0 40px 0;
   }
@@ -397,6 +397,10 @@ footer pre {
   }
   .project {
     margin-top: 40px;
+  }
+  .link {
+    width: 20px;
+    height: 20px;
   }
   footer pre {
     margin-left: -30px;
