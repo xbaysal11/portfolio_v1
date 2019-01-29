@@ -1,8 +1,3 @@
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 .parallax {
   -webkit-perspective: 100px;
   perspective: 100px;
@@ -38,8 +33,10 @@
   top: 100%;
   left: 0;
   right: 0;
-  height: 100vh;
+  /* height: 100vh; */
   z-index: 2;
+  /* text-align: center; */
+  padding: 50vh 100vw;
 }
 
 .parallax__layer__0 {
@@ -77,8 +74,14 @@
   transform: translateZ(0px) scale(1);
 }
 /*# sourceMappingURL=style.css.map */
-
+@font-face {
+  font-family: "circe";
+  src: url(../res/Circe-Regular.ttf);
+}
 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "circe";
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
@@ -95,7 +98,7 @@ body {
   margin-top: 100vh;
   width: 100%;
   background: #000;
-  font-family: circe;
+
   overflow: -moz-scrollbars-none;
 }
 /* width */
@@ -122,10 +125,7 @@ body {
 ::-webkit-scrollbar-corner {
   background: #000;
 }
-@font-face {
-  font-family: "circe";
-  src: url(../res/Circe-Regular.ttf);
-}
+
 .lang {
   width: 30px;
   height: 30px;
