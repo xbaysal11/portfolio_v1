@@ -18,7 +18,44 @@
     <link rel="stylesheet" href="css/master.css" />
   </head>
   <body>
+    <div></div>
+
+      <div class="parallax">
+         
+          <div class="parallax__layer parallax__layer__1">
+            <img
+              src="https://sam.beckham.io/images/articles/firewatch/layer_1.png"
+            />
+          </div>
+          <div class="parallax__layer parallax__layer__2">
+            <img
+              src="https://sam.beckham.io/images/articles/firewatch/layer_2.png"
+            />
+          </div>
+          <div class="parallax__layer parallax__layer__3">
+            <img
+              src="https://sam.beckham.io/images/articles/firewatch/layer_3.png"
+            />
+          </div>
+          <div class="parallax__layer parallax__layer__4">
+            <img
+              src="https://sam.beckham.io/images/articles/firewatch/layer_4.png"
+            />
+          </div>
+          <div class="parallax__layer parallax__layer__5">
+            <img
+              src="https://sam.beckham.io/images/articles/firewatch/layer_5.png"
+            />
+          </div>
+          <div class="parallax__layer parallax__layer__6">
+            <img src="./res/layer_6.png" />
+          </div>
+          <div class="parallax__cover"></div>
+        </div>
+      </div>
+
     <div class="wrapper">
+      
       <div id="loader"></div>
       <script type="text/javascript">
         var loader;
@@ -42,7 +79,7 @@
         });
       </script>
 
-      <div class="anim section">
+      <div id="t1" class="anim section">
         <div class="menu-block">
           <div class="nav">
             <label for="toggle">&#9776;</label>
@@ -69,7 +106,7 @@
           $(".menu-nav").toggleClass("menu-nav_active");
         });
       </script>
-
+     
       <div id="header">
         
         <img class="anim ornament" src="res/1.jpg" alt="project img" />
@@ -157,8 +194,8 @@
           </div>
         </header>
       </div>
-      <button onclick="topFunction()" id="up" title="Go to top">
-        <img src="res/up.png" alt="" />
+      <button  id="up" title="Go to top"><a href="#t1"><img src="res/up.png" alt="" /></a>
+        
       </button>
       <script>
         window.onscroll = function() {
